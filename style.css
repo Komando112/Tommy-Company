@@ -97,7 +97,7 @@ body { background: var(--dark); color: #fff; font-family: 'Cairo', sans-serif; o
   align-items: center;
   gap: 6px;
   font-size: 12px;
-  color: #6b7280;
+  color: #fff;
   transition: color 0.3s;
 }
 .platform-badge:hover { color: var(--primary); }
