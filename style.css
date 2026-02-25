@@ -1,3 +1,129 @@
+/* ===== BACKGROUND ANIMATIONS ===== */
+
+/* --- Floating Orbs --- */
+.bg-orbs {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  animation: orbFloat linear infinite;
+  will-change: transform, opacity;
+}
+
+.orb-1 {
+  width: 500px; height: 500px;
+  background: radial-gradient(circle, rgba(0,200,255,0.12) 0%, transparent 70%);
+  top: -100px; left: -150px;
+  animation-duration: 18s;
+  animation-delay: 0s;
+}
+.orb-2 {
+  width: 400px; height: 400px;
+  background: radial-gradient(circle, rgba(185,79,255,0.1) 0%, transparent 70%);
+  top: 30%; right: -100px;
+  animation-duration: 22s;
+  animation-delay: -6s;
+}
+.orb-3 {
+  width: 300px; height: 300px;
+  background: radial-gradient(circle, rgba(0,200,255,0.08) 0%, transparent 70%);
+  bottom: 20%; left: 20%;
+  animation-duration: 16s;
+  animation-delay: -10s;
+}
+.orb-4 {
+  width: 350px; height: 350px;
+  background: radial-gradient(circle, rgba(255,107,53,0.06) 0%, transparent 70%);
+  bottom: -80px; right: 20%;
+  animation-duration: 25s;
+  animation-delay: -3s;
+}
+.orb-5 {
+  width: 250px; height: 250px;
+  background: radial-gradient(circle, rgba(185,79,255,0.08) 0%, transparent 70%);
+  top: 60%; left: 5%;
+  animation-duration: 20s;
+  animation-delay: -14s;
+}
+
+@keyframes orbFloat {
+  0%   { transform: translate(0, 0) scale(1); opacity: 0.6; }
+  25%  { transform: translate(30px, -40px) scale(1.05); opacity: 0.9; }
+  50%  { transform: translate(-20px, 20px) scale(0.95); opacity: 0.5; }
+  75%  { transform: translate(40px, 30px) scale(1.08); opacity: 0.8; }
+  100% { transform: translate(0, 0) scale(1); opacity: 0.6; }
+}
+
+/* --- Scan Line --- */
+.scan-line {
+  position: fixed;
+  top: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(0,200,255,0.0) 20%,
+    rgba(0,200,255,0.6) 50%,
+    rgba(185,79,255,0.4) 70%,
+    transparent 100%
+  );
+  pointer-events: none;
+  z-index: 1;
+  animation: scanDown 8s linear infinite;
+  box-shadow: 0 0 12px rgba(0,200,255,0.3);
+}
+
+@keyframes scanDown {
+  0%   { top: -2px; opacity: 0; }
+  5%   { opacity: 1; }
+  95%  { opacity: 0.3; }
+  100% { top: 100vh; opacity: 0; }
+}
+
+/* --- Shooting Stars --- */
+.shooting-stars {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.star {
+  position: absolute;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(0,200,255,0.8), transparent);
+  border-radius: 100px;
+  animation: shoot linear infinite;
+  opacity: 0;
+}
+
+.star-1 { width: 150px; top: 15%; left: -160px; animation-duration: 6s; animation-delay: 1s; }
+.star-2 { width: 120px; top: 40%; left: -130px; animation-duration: 8s; animation-delay: 3.5s; background: linear-gradient(90deg, rgba(185,79,255,0.8), transparent); }
+.star-3 { width: 200px; top: 70%; left: -210px; animation-duration: 7s; animation-delay: 0.5s; }
+.star-4 { width: 100px; top: 25%; left: -110px; animation-duration: 9s; animation-delay: 5s; background: linear-gradient(90deg, rgba(255,107,53,0.7), transparent); }
+
+@keyframes shoot {
+  0%   { transform: translateX(0) translateY(0); opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 0.6; }
+  100% { transform: translateX(110vw) translateY(60px); opacity: 0; }
+}
+
+/* --- Hexagon Grid Pulse (CSS only, canvas is extra) --- */
+@keyframes gridFade {
+  0%, 100% { opacity: 0.03; }
+  50%       { opacity: 0.07; }
+}
+
 /* ===== GLOBAL RESET & BASE ===== */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -97,7 +223,7 @@ body { background: var(--dark); color: #fff; font-family: 'Cairo', sans-serif; o
   align-items: center;
   gap: 6px;
   font-size: 12px;
-  color: #fff;
+  color: #6b7280;
   transition: color 0.3s;
 }
 .platform-badge:hover { color: var(--primary); }

@@ -32,8 +32,28 @@
 </head>
 <body class="bg-dark font-arabic text-white overflow-x-hidden">
 
-  <!-- Particle BG -->
+  <!-- ===== BACKGROUND SYSTEM ===== -->
+  <!-- Animated grid -->
+  <canvas id="bgGrid" class="fixed inset-0 pointer-events-none z-0"></canvas>
+  <!-- Particles -->
   <canvas id="particles" class="fixed inset-0 pointer-events-none z-0"></canvas>
+  <!-- Floating orbs -->
+  <div class="bg-orbs" aria-hidden="true">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="orb orb-4"></div>
+    <div class="orb orb-5"></div>
+  </div>
+  <!-- Scan line -->
+  <div class="scan-line" aria-hidden="true"></div>
+  <!-- Shooting stars -->
+  <div class="shooting-stars" aria-hidden="true">
+    <div class="star star-1"></div>
+    <div class="star star-2"></div>
+    <div class="star star-3"></div>
+    <div class="star star-4"></div>
+  </div>
 
   <!-- ===== NAVBAR ===== -->
   <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-500">
@@ -381,13 +401,13 @@
             <svg class="w-5 h-5 text-gray-600 mr-auto rotate-180 group-hover:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
           </a>
 
-          <a href="mailto:info@tommycompany.com" class="contact-item group">
+          <a href="/cdn-cgi/l/email-protection#81e8efe7eec1f5eeececf8e2eeecf1e0eff8afe2eeec" class="contact-item group">
             <div class="contact-item-icon bg-primary/10 text-primary group-hover:bg-primary group-hover:text-dark">
               <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
             </div>
             <div>
               <p class="text-white font-semibold">البريد الإلكتروني</p>
-              <p class="text-gray-400 text-sm">info@tommycompany.com</p>
+              <p class="text-gray-400 text-sm"><span class="__cf_email__" data-cfemail="8de4e3ebe2cdf9e2e0e0f4eee2e0fdece3f4a3eee2e0">[email&#160;protected]</span></p>
             </div>
             <svg class="w-5 h-5 text-gray-600 mr-auto rotate-180 group-hover:text-primary transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
           </a>
@@ -514,7 +534,7 @@
             </li>
             <li class="flex items-center gap-3 text-gray-400 text-sm">
               <svg class="w-5 h-5 text-primary flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
-              info@tommycompany.com
+              <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="d2bbbcb4bd92a6bdbfbfabb1bdbfa2b3bcabfcb1bdbf">[email&#160;protected]</a>
             </li>
             <li class="flex items-start gap-3 text-gray-400 text-sm">
               <svg class="w-5 h-5 text-secondary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
@@ -527,15 +547,4 @@
       <!-- Footer Bottom -->
       <div class="border-t border-darkBorder pt-6 flex flex-col md:flex-row items-center justify-between gap-4">
         <p class="text-gray-500 text-sm text-center">
-          © 2025 Tommy Company. جميع الحقوق محفوظة.
-        </p>
-        <p class="text-gray-600 text-xs text-center">
-          صُنع بـ ❤️ لمساعدتك على النجاح الرقمي
-        </p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="main.js"></script>
-</body>
-</html>
+          © 2025 Tommy Company. جميع الحقوق
